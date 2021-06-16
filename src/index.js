@@ -11,6 +11,7 @@ import Routes from "./client/Routes";
 import renderer from "./helpers/renderer";
 import createStore from "./helpers/createStore";
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(
@@ -59,6 +60,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+app.listen(PORT, () => {
+  console.log("Listening on port ", PORT);
 });
