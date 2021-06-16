@@ -15,6 +15,7 @@
     "babel-preset-stage-0": "6.24.1",
     "compression": "1.7.0",
     "concurrently": "3.5.0",
+    "dotenv": "^10.0.0",
     "express": "4.15.4",
     "express-http-proxy": "1.0.6",
     "lodash": "4.17.4",
@@ -37,7 +38,8 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch build --exec node build/bundle.js",
-    "dev:build-server": "SET NODE_ENV=development & webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch"
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "start": "node build/bundle.js"
   }
 }

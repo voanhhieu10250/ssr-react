@@ -1,7 +1,12 @@
 import React from "react";
 
 const HomePage = () => {
-  return <div>I'm the home component</div>;
+  return (
+    <div className="center-align" style={{ marginTop: "200px" }}>
+      <h3>Welcome</h3>
+      <p>Check out these awasome features</p>
+    </div>
+  );
 };
 
 export default {
